@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruturaj R. Nevse — DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Ruturaj R. Nevse — DevOps & Cloud Engineer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent1:#7b7eff;--accent2:#ff6b6b;--muted:#93a0b2}
+    *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#081026 0%, #071028 50%, #07162a 100%)}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:72px;height:72px;border-radius:16px;display:grid;place-items:center;font-weight:800;color:white;background:linear-gradient(135deg,var(--accent1),var(--accent2));font-size:22px;box-shadow:0 8px 30px rgba(11,18,32,0.6)}
+    .title h1{margin:0;font-size:20px}
+    .title p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:10px}
+    .navbtn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:#dbeafe;cursor:pointer}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:14px;padding:20px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .hero h2{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin-top:10px}
+
+    .cta{display:flex;gap:10px;margin-top:16px}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:white;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:#dbeafe}
+
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+    .avatar{width:160px;height:160px;border-radius:20px;display:grid;place-items:center;font-size:44px;font-weight:800;color:#041329;background:linear-gradient(135deg,#bde0fe,#7b7eff)}
+    .role{background:linear-gradient(90deg,#e6f4ff,#fff0f0);padding:8px 12px;border-radius:999px;font-weight:700;color:#051025}
+
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .skill-pill{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04)}
+    .skill-pill h4{margin:0;font-size:13px}
+    .skill-pill p{margin:6px 0 0 0;color:var(--muted);font-size:12px}
+
+    section h3{margin:0 0 8px 0}
+    .projects{display:grid;gap:12px}
+    .project{display:flex;gap:12px;align-items:flex-start}
+    .project .meta{flex:1}
+    .project .tag{padding:6px 10px;border-radius:8px;background:linear-gradient(90deg,#111827,#0b1220);border:1px solid rgba(255,255,255,0.04);font-weight:700;font-size:12px}
+
+    .footer{margin-top:20px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:980px){.grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.avatar{width:120px;height:120px}}
+
+    /* small code block */
+    pre{background:#020617;padding:12px;border-radius:8px;color:#c7d2fe;overflow:auto}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">RN</div>
+        <div class="title">
+          <h1>Ruturaj R. Nevse</h1>
+          <p>DevOps & Cloud Engineer — Automation | CI/CD | Kubernetes</p>
+        </div>
+      </div>
+      <nav>
+        <button class="navbtn" onclick="scrollToSection('projects')">Projects</button>
+        <button class="navbtn" onclick="scrollToSection('skills')">Skills</button>
+        <button class="navbtn" onclick="scrollToSection('contact')">Contact</button>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <div>
+        <div class="card hero">
+          <h2>Professional DevOps Portfolio</h2>
+          <p>Hi — I'm <strong>Ruturaj</strong>, a DevOps engineer who builds scalable infrastructure, automates delivery pipelines, and drives observability across cloud-native systems. I focus on Terraform, Kubernetes, CI/CD automation and robust monitoring.</p>
+
+          <div class="cta">
+            <a class="btn-primary" href="#projects">View work</a>
+            <a class="btn-ghost" href="#contact">Hire / Contact</a>
+            <button class="btn-ghost" onclick="downloadHTML()">Download HTML</button>
+          </div>
+
+          <section id="projects" style="margin-top:18px">
+            <h3>Selected Projects</h3>
+            <div class="projects">
+              <div class="project card">
+                <div class="meta">
+                  <div style="display:flex;justify-content:space-between;align-items:center"><strong>CI/CD Platform — Jenkins & ArgoCD</strong><span class="tag">CI/CD</span></div>
+                  <p class="muted-small" style="color:var(--muted);margin-top:8px">Built a multi-branch Jenkins pipeline that builds, tests, and pushes container images; ArgoCD deploys to EKS with automated rollbacks and progressive delivery.</p>
+                  <ul style="margin:8px 0 0 18px;color:var(--muted)"><li>Jenkinsfile with parallel stages</li><li>Image scanning & signing</li><li>Blue/green & canary releases</li></ul>
+                </div>
+              </div>
+
+              <div class="project card">
+                <div class="meta">
+                  <div style="display:flex;justify-content:space-between;align-items:center"><strong>Infra as Code — Terraform Modules</strong><span class="tag">IaC</span></div>
+                  <p class="muted-small" style="color:var(--muted);margin-top:8px">Reusable Terraform modules to provision VPC, EKS, RDS and centralized logging. Remote state stored in S3 with DynamoDB locking.</p>
+                  <ul style="margin:8px 0 0 18px;color:var(--muted)"><li>Module versioning & testing</li><li>Secure secrets with AWS Secrets Manager</li></ul>
+                </div>
+              </div>
+
+              <div class="project card">
+                <div class="meta">
+                  <div style="display:flex;justify-content:space-between;align-items:center"><strong>Monitoring & Observability</strong><span class="tag">Monitoring</span></div>
+                  <p class="muted-small" style="color:var(--muted);margin-top:8px">Prometheus, Grafana, and ELK stack for cluster and app telemetry with SLO-based alerting and runbooks.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section id="skills" style="margin-top:18px">
+            <h3>Skills</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#e8f0ff,#ffdede);font-weight:700;color:#07102a">AWS</span>
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#e8f0ff,#ffe6b3);font-weight:700;color:#07102a">Terraform</span>
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#f0fff4,#e6f7ff);font-weight:700;color:#07102a">Docker</span>
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#fff0f5,#e6f7ff);font-weight:700;color:#07102a">Kubernetes</span>
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#fff7e6,#e8f0ff);font-weight:700;color:#07102a">Jenkins / GitHub Actions</span>
+              <span style="padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#e6f7ff,#fff0f0);font-weight:700;color:#07102a">Prometheus / Grafana</span>
+            </div>
+          </section>
+
+          <section style="margin-top:18px">
+            <h3>Deployment (Quick)</h3>
+            <div style="color:var(--muted);margin-top:8px">
+              <p>Copy this file to your EC2 instance and place it in <code>/var/www/html/index.html</code>. Then restart Apache.</p>
+              <pre>scp -i ~/Downloads/your-key.pem ./Ruturaj_R_Nevse_Portfolio_Pro.html ec2-user@&lt;EC2-PUBLIC-IP&gt;:/tmp/
+# on EC2:
+sudo mv /tmp/Ruturaj_R_Nevse_Portfolio_Pro.html /var/www/html/index.html
+sudo chown root:root /var/www/html/index.html
+sudo systemctl restart httpd</pre>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <aside>
+        <div class="card profile">
+          <div class="avatar">RN</div>
+          <div style="font-weight:800;font-size:16px">Ruturaj R. Nevse</div>
+          <div class="role">DevOps Engineer</div>
+          <div style="color:var(--muted);font-size:13px">Location: India • Open to opportunities</div>
+
+          <div style="width:100%;margin-top:12px;text-align:left">
+            <h4 style="margin:0 0 6px 0">Contact</h4>
+            <div style="color:var(--muted);font-size:13px">Email: ruturaj@example.com<br>Phone: +91 9XXXXXXXXX</div>
+          </div>
+
+          <div style="width:100%;margin-top:12px">
+            <h4 style="margin:0 0 6px 0">Quick Stats</h4>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <div class="skill-pill"><h4>Infra</h4><p>EC2, VPC, S3, RDS, EKS</p></div>
+              <div class="skill-pill"><h4>CI/CD</h4><p>Jenkins, ArgoCD, GitHub Actions</p></div>
+              <div class="skill-pill"><h4>Languages</h4><p>Bash, Python</p></div>
+            </div>
+          </div>
+
+          <div style="width:100%;margin-top:12px">
+            <h4 style="margin:0 0 6px 0">Resume</h4>
+            <a class="btn-ghost" href="#" onclick="downloadResume()">Download PDF</a>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <h4 style="margin:0 0 8px 0">Get in touch</h4>
+          <form onsubmit="alert('Thanks — demo form (replace with real backend)');return false;">
+            <input placeholder="Your name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8" />
+            <input placeholder="Your email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);margin-top:8px;background:transparent;color:#e6eef8" />
+            <textarea placeholder="Message" rows="4" style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8"></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px"><button class="btn-primary" type="submit">Send</button><button type="reset" class="btn-ghost">Clear</button></div>
+          </form>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div>© <strong>Ruturaj R. Nevse</strong> — DevOps Portfolio</div>
+      <div style="color:var(--muted);font-size:13px">Built for deployment on EC2 • Need customizations? Ask me.</div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToSection(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
+    function downloadHTML(){
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content],{type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a=document.createElement('a');a.href=url;a.download='Ruturaj_R_Nevse_Portfolio_Pro.html';a.click();URL.revokeObjectURL(url);
+    }
+    function downloadResume(){
+      alert('Resume download placeholder — attach a real PDF in /var/www/html or S3');
+    }
+  </script>
+</body>
+</html>
